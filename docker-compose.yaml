@@ -1,0 +1,10 @@
+version: "2.3"
+services:
+  locustio:
+    build: .
+    ports:
+      - 8089:8089
+    environment:
+      - ATTACKED_HOST=http://35.238.127.182
+    volumes:
+      - /Users/miguel/Documents/Engineering/personal/locustio/locustfile.py:/locust/locustfile.py
